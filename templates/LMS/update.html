@@ -1,0 +1,18 @@
+{% extends "LMS/headers.html" %}
+{% block content %}
+<div class="container">
+    <form method="POST">
+      {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Update Book name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" name="book" placeholder="Enter the book name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Update Book Title</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="title" placeholder="Book title">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+</div>
+
+{% endblock %}
